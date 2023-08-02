@@ -6,3 +6,4 @@
 5-listfilesdigitonly: Display current directory contents in long format, with IDs, and hidden files.
 6-firstdirectory: creates a directory.
 7-movethatfile: moves a file to a different directory.
+8-firstdelete: deletes a file.
