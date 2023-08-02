@@ -4,4 +4,5 @@
 3-listfiles: Display current directory contents in a long format.
 4-listmorefiles: Display current directory contents, including hidden files.
 5-listfilesdigitonly: Display current directory contents in long format, with IDs, and hidden files.
-my_first_directory: creates a directory.
+6-firstdirectory: creates a directory.
+7-movethatfile: moves a file to a different directory.
