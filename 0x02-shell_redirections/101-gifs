@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name "*.gif" -exec ls -a {} +
+find . -type f -name "*.gif" | sed -E 's|^.*/([^/]+)\.gif$|\1|' | LC_COLLATE=C sort -f | sed -E '/^\s*$/d'
