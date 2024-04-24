@@ -1,7 +1,22 @@
-#!/usr/bin/env bash
-# Installs nginx server
+#!/bin/bash
+
+# Update package list and install nginx with the -y flag to automatically answer yes to prompts
 apt-get update
 apt-get install -y nginx
-ufw allow 'Nginx HTTP'
-echo "Hello World!" > /var/www/html/index.html
-service nginx start
+
+# Set up Nginx configuration
+echo "server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        root /var/www/html;
+        index index.html index.htm;
+
+        location / {
+                echo 'Hello World!';
+        }
+}" > /etc/nginx/sites-available/default
+
+# Restart Nginx
+service nginx restart
+
