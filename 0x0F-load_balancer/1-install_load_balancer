@@ -1,18 +1,4 @@
 #!/usr/bin/env bash
 # configures HAproxy
 
-apt-get -y update
-apt-get -y install haproxy
 
-echo '
-dev wafaa-gaafar.tech
-        bind 0:80
-        default_backend web_servers
-
-backend web_servers
-        balance roundrobin
-        server 513202-web-01 54.237.11.197:80
-        server 513202-web-02 35.153.16.149:80
-' >> /etc/haproxy/haproxy.cfg
-
-service haproxy restart
