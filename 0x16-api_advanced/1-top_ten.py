@@ -1,11 +1,20 @@
 #!/usr/bin/python3
-"""Top ten"""
+"""Module to fetch top ten hot posts from a subreddit.
+
+This module contains a function that fetches and prints the titles
+of the top ten hot posts from a given subreddit using the Reddit API.
+"""
 
 import requests
 
 def top_ten(subreddit):
-    """
-    queries the Reddit API and prints the titles of the first 10 hot posts listed for a given subreddit.
+    """Fetch and print the titles of the top ten hot posts from a subreddit.
+
+    Args:
+        subreddit (str): The name of the subreddit.
+
+    Prints:
+        The titles of the top ten hot posts, or None if the request fails.
     """
     url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit=10"
     headers = {"User-Agent": "CustomUserAgent/0.1"}
